@@ -1,0 +1,2 @@
+# grafana-fun
+Grafana experiments
