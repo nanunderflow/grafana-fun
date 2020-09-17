@@ -6,4 +6,8 @@
     <RootNamespace>grafana_fun</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="InfluxDB.Client" Version="1.11.0" />
+  </ItemGroup>
+
 </Project>
