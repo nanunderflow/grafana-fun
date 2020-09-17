@@ -31,6 +31,8 @@ namespace Metrics
                 var temperature = new Temperature {Location = "south", Value = 62D, Time = DateTime.UtcNow};
                 writer.WriteMeasurement("bucket_name", "org_id", WritePrecision.Ns, temperature);
             }
+
+            Console.WriteLine("Done.");
         }
     }
 }
