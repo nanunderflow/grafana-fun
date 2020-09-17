@@ -24,12 +24,12 @@ namespace Metrics
 
         public static void Main(string[] args)
         {
-            var influxDBClient = InfluxDBClientFactory.Create("http://localhost:8086", Token);
+            var client = InfluxDBClientFactory.Create("http://localhost:8086", Token);
 
-            using (var writeApi = influxDBClient.GetWriteApi())
+            using (var writer = client.GetWriteApi())
             {
                 var temperature = new Temperature {Location = "south", Value = 62D, Time = DateTime.UtcNow};
-                writeApi.WriteMeasurement("bucket_name", "org_id", WritePrecision.Ns, temperature);
+                writer.WriteMeasurement("bucket_name", "org_id", WritePrecision.Ns, temperature);
             }
         }
     }
